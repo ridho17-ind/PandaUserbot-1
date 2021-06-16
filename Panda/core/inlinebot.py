@@ -117,7 +117,7 @@ def main_menu():
         ),
     ]
     return text, buttons
-    
+
 
 def command_in_category(cname):
     cmds = 0
