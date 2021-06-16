@@ -14,7 +14,7 @@ from ..helpers.utils import reply_id
 from . import mention
 
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
-EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
+EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 plugin_category = "utils"
 
@@ -44,12 +44,8 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         panda_caption += f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n\n"
-        panda_caption += (
-            f"**{EMOJI} Repo :** [Klik](https://github.com/ilhammansiz/PandaUserbot)\n"
-        )
-        panda_caption += (
-            f"**{EMOJI} Support :** [Klik](https://t.me/TEAMSquadUserbotSupport)\n"
-        )
+        panda_caption += f"**{EMOJI} Repo :** [Klik](https://github.com/ilhammansiz/PandaUserbot)\n"
+        panda_caption += f"**{EMOJI} Support :** [Klik](https://t.me/TEAMSquadUserbotSupport)\n"
         panda_caption += f"**{EMOJI} Creator :** [Klik](http://t.me/diemmmmmmmmmm)\n"
         await event.client.send_file(
             event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
@@ -68,7 +64,8 @@ async def amireallyalive(event):
             f"**{EMOJI} Master:** {mention}\n\n",
             f"**{EMOJI} Repo :** [Klik](https://github.com/ilhammansiz/PandaUserbot)\n"
             f"**{EMOJI} Support :** [Klik](https://t.me/TEAMSquadUserbotSupport)\n"
-            f"**{EMOJI} Creator :** [Klik](http://t.me/diemmmmmmmmmm)\n",
+            f"**{EMOJI} Creator :** [Klik](http://t.me/diemmmmmmmmmm)\n"
+      
         )
 
 
