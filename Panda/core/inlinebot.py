@@ -53,6 +53,7 @@ def ibuild_keyboard(buttons):
             keyb.append([Button.url(btn[0], btn[1])])
     return keyb
 
+
 import re
 import time
 from platform import python_version
@@ -60,7 +61,8 @@ from platform import python_version
 from telethon import version
 from telethon.events import CallbackQuery
 
-from Panda import StartTime, pandaub, pandaversion
+from Panda import pandaub, pandaversion
+
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
 
