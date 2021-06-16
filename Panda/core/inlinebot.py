@@ -73,7 +73,6 @@ def main_menu():
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
         panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
         panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-    text = Config.ALIVE_PIC
     buttons = [
         (
             Button.inline(
