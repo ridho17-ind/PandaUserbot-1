@@ -128,8 +128,10 @@ def main_menu():
     ]
     return text, buttons
 
+
 def ilham_logo():
-    file = ilhammansiez
+    pass
+
 
 def command_in_category(cname):
     cmds = 0
@@ -631,7 +633,6 @@ async def on_plug_in_callback_query_handler(event):
     _result = ilham_logo()
     _result = main_menu()
     await event.edit(_result[0], buttons=_result[1]),
-    
 
 
 @pandaub.tgbot.on(
