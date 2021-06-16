@@ -34,6 +34,7 @@ PANDALOGO = "https://telegra.ph/file/08a3d412e29a1351b7aaa.jpg"
 tr = Config.COMMAND_HAND_LER
 ilhammansiez = Config.PANDA_IMAGE
 
+
 def getkey(val):
     for key, value in GRP_INFO.items():
         for plugin in value:
@@ -67,7 +68,6 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n**{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
-    file = ilhammansiez
     buttons = [
         (
             Button.inline(
@@ -138,7 +138,8 @@ def main_menu():
             ),
         ),
     ]
-    return  ilhammansiez, text, buttons
+    return ilhammansiez, text, buttons
+
 
 def command_in_category(cname):
     cmds = 0
