@@ -536,11 +536,11 @@ async def on_plugin_callback_query_handler(event):
         file=ilhammansiez,
         link_preview=True,
         buttons=[
-            Button.url("🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
+            Button.inline("❌ Hapus semua ❌", data="ilhammansizz"),
             Button.inline("MENU UTAMA", data="mainmenu"),
-            Button.url("•SUPPORT• ", "https://t.me/TEAMSquadUserbotSupport"),
         ],
     )
+   await event.edit("⬇ Pilihan Close ⬇", buttons=buttons)
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
