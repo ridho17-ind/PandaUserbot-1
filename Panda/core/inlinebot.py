@@ -628,12 +628,11 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     _result = main_menu()
     await event.edit(_result[0], buttons=_result[1]),
-    result = builder.photo(
+    _result = builder.photo(
                     file=ilhammansiez,
                     link_preview=False,
-                    ),
-                    buttons=buttons,
-                )
+                  )
+                    
 
 
 @pandaub.tgbot.on(
