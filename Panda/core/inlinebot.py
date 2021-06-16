@@ -543,7 +543,7 @@ async def on_plugin_callback_query_handler(event):
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansiz")))
 async def on_plugin_callback_query_handler(event):
     await event.edit(
-        PANDA_IMG,
+        ilhammansiez,
         link_preview=True,
         buttons=[
             Button.url("🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
