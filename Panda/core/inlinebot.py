@@ -627,7 +627,14 @@ async def on_plug_in_callback_query_handler(event):
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     _result = main_menu()
-    await event.edit(_result[0], buttons=_result[1])
+    await event.edit(_result[0], buttons=_result[1]),
+    result = builder.photo(
+                    file=ilhammansiez,
+                    link_preview=False,
+                    text = f"╔══════════════\n╠[🐼]({ilhammansiez}) 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"),
+                    ),
+                    buttons=buttons,
+                )
 
 
 @pandaub.tgbot.on(
