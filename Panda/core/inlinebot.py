@@ -539,16 +539,18 @@ async def on_plugin_callback_query_handler(event):
         "
     await event.answer(text, cache_time=0, alert=True)
 
+
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansiz")))
 async def on_plugin_callback_query_handler(event):
     await event.edit(
-              file=ilhammansiz,
-                    link_preview=True,
-                    buttons=[
-                          Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
-                          Button.url("•SUPPORT• ", "t.me/GeezSupportGroup")
-                    ]
-                )
+        file=ilhammansiz,
+        link_preview=True,
+        buttons=[
+            Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
+            Button.url("•SUPPORT• ", "t.me/GeezSupportGroup"),
+        ],
+    )
+
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"(.*)_menu")))
 @check_owner
