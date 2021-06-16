@@ -68,12 +68,16 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
 
 
 def main_menu():
-    text = f"👾𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n🐼𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n🤖𝗨𝘀𝗲𝗿 :{mention}\n"
+    text = f"**{CUSTOM_ALIVE_TEXT}**\n\n",
+           f"**{EMOJI} Telethon version :** `{version.__version__}\n`",
+           f"**{EMOJI} Bot Version :** `{pandaversion}`\n",
+           f"**{EMOJI} Python Version :** `{python_version()}\n`"
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
         panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
         panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
+    text = Config.ALIVE_PIC
     buttons = [
         (
             Button.inline(
