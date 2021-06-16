@@ -57,9 +57,7 @@ def ibuild_keyboard(buttons):
 def main_menu():
     PANDA_IMG = Config.ALIVE_PIC or None
     if PANDA_IMG and PANDA_IMG.endswith((".jpg", ".png")):
-    result = builder.photo(
-    PANDA_IMG,
-  # title="Alive panda",
+    file = PANDA_IMG
     text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
