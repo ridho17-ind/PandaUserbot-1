@@ -138,7 +138,7 @@ def main_menu():
             ),
         ),
     ]
-    return ilhammansiez, text, buttons
+    return file, text, buttons
 
 
 def command_in_category(cname):
