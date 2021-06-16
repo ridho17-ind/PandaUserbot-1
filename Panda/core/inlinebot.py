@@ -536,7 +536,7 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         (Button.inline("🤖 Open Menu 🤖", data="mainmenu"),),
     ]
-    await event.edit("Menu Closed", buttons=buttons)
+    await event.edit("Menu Closed")
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
