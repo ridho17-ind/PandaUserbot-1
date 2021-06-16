@@ -55,6 +55,7 @@ async def amireallyalive(event):
             f"**{EMOJI} Telethon Version :** `{version.__version__}\n`"
             f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
+            f"**{EMOJI} Sudo  :** _parse_arg(Config.SUDO_ENABLED)}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n",
         )
@@ -74,7 +75,7 @@ async def amireallyalive(event):
 async def amireallyalive(event):
     "A kind of showing bot details by your inline bot"
     reply_to_id = await reply_id(event)
-    panda_caption = f"**Catuserbot is Up and Running**\n"
+    panda_caption = f"**Pandauserbot is Up and Running**\n"
     panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
     panda_caption += f"**{EMOJI} PetercordBot Version :** `{pandaversion}`\n"
     panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
