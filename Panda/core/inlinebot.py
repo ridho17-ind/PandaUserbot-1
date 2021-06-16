@@ -69,8 +69,8 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n",
-           f"**{EMOJI} Bot Version :** `{pandaversion}`\n",
-           f"**{EMOJI} Python Version :** `{python_version()}\n`"
+           f"**{EMOJI} Bot Version :** `2021-06-05`\n",
+           f"**{EMOJI} Python Version :** `🤖 🐼\n`"
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
