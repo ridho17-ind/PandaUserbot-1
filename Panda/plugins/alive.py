@@ -44,7 +44,7 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         panda_caption += f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n"
-        panda_caption += "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)\n"
+        panda_caption +=  "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)\n"
         await event.client.send_file(
             event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
         )
@@ -60,7 +60,7 @@ async def amireallyalive(event):
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n\n")
-            "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)"
+             "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)"
         
 
 
