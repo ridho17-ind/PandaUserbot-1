@@ -20,8 +20,8 @@ plugin_category = "utils"
 
 
 @pandaub.ilhammansiz_cmd(
-    pattern="alive$",
-    command=("alive", plugin_category),
+    pattern="data$",
+    command=("data", plugin_category),
     info={
         "header": "To check bot's alive status",
         "options": "To show media in this cmd you need to set ALIVE_PIC with media link, get this by replying the media by .tgm",
@@ -44,7 +44,6 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         panda_caption += f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n"
-        panda_caption +=  "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)\n"
         await event.client.send_file(
             event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
         )
@@ -59,10 +58,9 @@ async def amireallyalive(event):
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
-            f"**{EMOJI} Master:** {mention}\n\n")
-             "[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot) 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)"
-        
-
+            f"**{EMOJI} Master:** {mention}\n\n"
+)
+             
 
 @pandaub.ilhammansiz_cmd(
     pattern="ialive$",
