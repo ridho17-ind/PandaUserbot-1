@@ -64,11 +64,10 @@ async def amireallyalive(event):
             file=EMOJI,
             link_preview=True,
             buttons=[
-                     Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
-                     Button.url("•SUPPORT• ", "t.me/GeezSupportGroup")
-                   ]
-              )
-        
+                Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
+                Button.url("•SUPPORT• ", "t.me/GeezSupportGroup"),
+            ],
+        )
 
 
 @pandaub.ilhammansiz_cmd(
