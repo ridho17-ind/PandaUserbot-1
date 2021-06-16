@@ -33,7 +33,7 @@ LOGS = logging.getLogger(__name__)
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 PANDALOGO = "https://telegra.ph/file/08a3d412e29a1351b7aaa.jpg"
 tr = Config.COMMAND_HAND_LER
-
+ilhammansiz = Cofig.PANDA_IMAGE
 
 def getkey(val):
     for key, value in GRP_INFO.items():
@@ -517,6 +517,8 @@ async def inline_handler(event):  # sourcery no-metrics
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
+        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),
+        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),
         (Button.inline("Open Menu", data="mainmenu"),),
     ]
     await event.edit("Menu Closed", buttons=buttons)
