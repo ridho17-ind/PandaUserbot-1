@@ -55,7 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
+    text = f"𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
             Button.inline(
@@ -128,9 +128,40 @@ def main_menu():
     ]
     return text, buttons
 
+import re
+import time
+from platform import python_version
 
-def ilham_logo():
-    pass
+from telethon import version
+from telethon.events import CallbackQuery
+
+from Panda import StartTime, pandaub, pandaversion
+
+from ..Config import Config
+from ..core.managers import edit_or_reply
+from ..helpers.functions import pandaalive, check_data_base_heal_th, get_readable_time
+from ..helpers.utils import reply_id
+from . import mention
+
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
+EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
+
+def ilham_logo(event):
+    "A kind of showing bot details"
+    reply_to_id = await reply_id(event)
+    uptime = await get_readable_time((time.time() - StartTime))
+    _, check_sgnirts = check_data_base_heal_th()
+    if Config.ALIVE_PIC:
+        panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+        panda_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
+        panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
+        panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
+        panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
+        panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
+        panda_caption += f"**{EMOJI} Master:** {mention}\n"
+        await event.client.send_file(
+            event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
+        )
 
 
 def command_in_category(cname):
