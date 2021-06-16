@@ -714,7 +714,7 @@ async def pic_gifcmd(event):
             os.remove(i)
 
 
-@apandaub.ilhammansiz_cmd(
+@pandaub.ilhammansiz_cmd(
     pattern="vtog ?([0-9.]+)?$",
     command=("vtog", plugin_category),
     info={
