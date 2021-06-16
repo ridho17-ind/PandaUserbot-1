@@ -530,14 +530,18 @@ async def inline_handler(event):  # sourcery no-metrics
         await event.answer([result] if result else None)
 
 
-@pandaub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
-@check_owner
-async def on_plug_in_callback_query_handler(event):
-    buttons = [
-        (Button.inline("🤖 Open Menu 🤖", data="mainmenu"),),
-    ]
-    await event.edit("Menu Closed")
 
+@pandaub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
+async def on_plugin_callback_query_handler(event):
+    await event.edit(
+        file=ilhammansiez,
+        link_preview=True,
+        buttons=[
+            Button.url("🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
+            Button.inline("MENU UTAMA", data="mainmenu"),
+            Button.url("•SUPPORT• ", "https://t.me/TEAMSquadUserbotSupport"),
+        ],
+    )
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
 async def on_plugin_callback_query_handler(event):
