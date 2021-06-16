@@ -62,7 +62,7 @@ async def amireallyalive(event):
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n\n",
-            f"**[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot), 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)
+            f"**[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot)**\n** 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)**)
         
 
 
