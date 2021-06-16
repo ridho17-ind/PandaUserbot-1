@@ -541,6 +541,7 @@ async def on_plugin_callback_query_handler(event):
         ],
     )
 
+
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"dara")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
@@ -550,7 +551,6 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit("❌ Pencet ❌", buttons=buttons)
 
 
- 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"vinna")))
 async def on_plugin_callback_query_handler(event):
     await event.edit("❌ Terhapus Semua ❌")
