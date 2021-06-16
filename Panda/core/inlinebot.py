@@ -55,7 +55,8 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    ilham = ilhammansiez
+    ilham = ilhammansiez,
+    link_preview=False,
     text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
