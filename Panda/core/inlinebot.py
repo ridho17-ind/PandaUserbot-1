@@ -64,12 +64,11 @@ from telethon.events import CallbackQuery
 from Panda import pandaub, pandaversion
 
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
-EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
+EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n",
-           f"**{EMOJI} Telethon version :** `{version.__version__}\n`",
            f"**{EMOJI} Bot Version :** `{pandaversion}`\n",
            f"**{EMOJI} Python Version :** `{python_version()}\n`"
     if Config.ALIVE_PIC:
