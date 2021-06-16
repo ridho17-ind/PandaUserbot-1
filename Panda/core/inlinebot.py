@@ -35,6 +35,7 @@ PANDALOGO = "https://telegra.ph/file/08a3d412e29a1351b7aaa.jpg"
 tr = Config.COMMAND_HAND_LER
 ilhammansiz = Config.PANDA_IMAGE
 
+
 def getkey(val):
     for key, value in GRP_INFO.items():
         for plugin in value:
@@ -54,7 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    file=ilhammansiz,
+    ilhammansiz,
     text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
