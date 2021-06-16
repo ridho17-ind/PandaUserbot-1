@@ -55,6 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
+    if Config.ALIVE_PIC:
     text = f"𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
@@ -128,35 +129,6 @@ def main_menu():
     ]
     return text, buttons
 
-
-import re
-import time
-from platform import python_version
-
-from telethon import version
-from telethon.events import CallbackQuery
-
-from Panda import pandaub, pandaversion
-
-from ..Config import Config
-from . import mention
-
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
-EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
-
-
-def amireallyalive(event):
-    if Config.ALIVE_PIC:
-        panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        panda_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
-        panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-        panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
-        panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-        panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
-        panda_caption += f"**{EMOJI} Master:** {mention}\n"
-        await event.client.send_file(
-            event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
-        )
 
 
 def command_in_category(cname):
@@ -656,7 +628,6 @@ async def on_plug_in_callback_query_handler(event):
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    _result = amireallyalive(event)
     _result = main_menu()
     await event.edit(_result[0], buttons=_result[1]),
 
