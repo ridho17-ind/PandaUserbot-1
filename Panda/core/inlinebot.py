@@ -540,8 +540,7 @@ async def on_plugin_callback_query_handler(event):
             Button.inline("MENU UTAMA", data="mainmenu"),
         ],
     )
-   await event.edit("⬇ Pilihan Close ⬇", buttons=buttons)
-
+   
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
 async def on_plugin_callback_query_handler(event):
