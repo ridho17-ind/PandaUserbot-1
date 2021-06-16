@@ -536,15 +536,24 @@ async def on_plugin_callback_query_handler(event):
         file=ilhammansiez,
         link_preview=True,
         buttons=[
-            Button.inline("❌ Hapus semua ❌", data="ilhammansizz"),
+            Button.inline("❌ Hapus semua ❌", data="dara"),
             Button.inline("MENU UTAMA", data="mainmenu"),
         ],
     )
 
+@pandaub.tgbot.on(CallbackQuery(data=re.compile(b"dara")))
+@check_owner
+async def on_plug_in_callback_query_handler(event):
+    buttons = [
+        (Button.inline("Open Menu", data="vinna"),),
+    ]
+    await event.edit("❌ Pencet ❌", buttons=buttons)
 
-@pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
+
+ 
+@pandaub.tgbot.on(CallbackQuery(data=re.compile(b"vinna")))
 async def on_plugin_callback_query_handler(event):
-    f"❌ TerHapus Semua ❌"
+    await event.edit("❌ Terhapus Semua ❌")
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
