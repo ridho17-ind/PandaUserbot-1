@@ -117,7 +117,7 @@ async def digitalpicloop():
         cat = str(base64.b64decode("dXNlcmJvdC9oZWxwZXJzL3N0eWxlcy9kaWdpdGFsLnR0Zg=="))[
             2:36
         ]
-        fnt = ImageFont.truetype(cat, 200)
+        fnt = ImageFont.truetype(panda, 200)
         drawn_text.text((350, 100), current_time, font=fnt, fill=(124, 252, 0))
         img.save(autophoto_path)
         file = await pandaub.upload_file(autophoto_path)
@@ -129,7 +129,7 @@ async def digitalpicloop():
                     )
                 )
             i += 1
-            await catub(functions.photos.UploadProfilePhotoRequest(file))
+            await pandaub(functions.photos.UploadProfilePhotoRequest(file))
             os.remove(autophoto_path)
             await asyncio.sleep(60)
         except BaseException:
@@ -205,7 +205,7 @@ async def autobio_loop():
         bio = f"📅 {DMY} | {DEFAULTUSERBIO} | ⌚️ {HM}"
         LOGS.info(bio)
         try:
-            await catub(functions.account.UpdateProfileRequest(about=bio))
+            await pandaub(functions.account.UpdateProfileRequest(about=bio))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
