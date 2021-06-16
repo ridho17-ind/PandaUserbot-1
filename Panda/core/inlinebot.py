@@ -67,10 +67,6 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n**{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
-    if Config.ALIVE_PIC:
-        try:
-            logo = Config.ALIVE_PIC
-            text = await event.send_file(logo, text)
     buttons = [
         (
             Button.inline(
@@ -141,8 +137,10 @@ def main_menu():
             ),
         ),
     ]
-    return text, buttons
-
+    if Config.ALIVE_PIC:
+        try:
+            logo = Config.ALIVE_PIC
+            return = await event.client.send_file(logo, text, buttons)
 
 def command_in_category(cname):
     cmds = 0
