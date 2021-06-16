@@ -42,6 +42,7 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
         panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
+        panda_caption += f"**{EMOJI} Sudo  :** _parse_arg(Config.SUDO_ENABLED)}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n"
         await event.client.send_file(
             event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
