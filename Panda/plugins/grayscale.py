@@ -6,7 +6,7 @@ from typing import Optional, Tuple
 import PIL.ImageOps
 from PIL import Image
 
-from Panda import LOGS, pandaub
+from Panda import pandaub
 
 plugin_category = "utils"
 
