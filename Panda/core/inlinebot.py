@@ -539,7 +539,6 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit("Menu Closed", buttons=buttons)
 
 
-
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
 async def on_plugin_callback_query_handler(event):
     f"❌ TerHapus Semua ❌"
