@@ -546,7 +546,7 @@ async def on_plugin_callback_query_handler(event):
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
-        (Button.inline("Open Menu", data="vinna"),),
+        (Button.inline("❌ Hapus semua ❌", data="vinna"),),
     ]
     await event.edit("❌ Pencet ❌", buttons=buttons)
 
