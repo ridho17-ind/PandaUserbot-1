@@ -67,9 +67,9 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n**{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
-    if Config.ALIVE_PIC:
+    if ilhammansiez:
         try:
-            logo = Config.ALIVE_PIC
+            file = ilhammansiez
     buttons = [
         (
             Button.inline(
@@ -140,7 +140,7 @@ def main_menu():
             ),
         ),
     ]
-    return  logo, text, buttons
+    return  ilhammansiez, text, buttons
 
 def command_in_category(cname):
     cmds = 0
