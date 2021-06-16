@@ -128,6 +128,7 @@ def main_menu():
     ]
     return text, buttons
 
+
 import re
 import time
 from platform import python_version
@@ -138,13 +139,13 @@ from telethon.events import CallbackQuery
 from Panda import StartTime, pandaub, pandaversion
 
 from ..Config import Config
-from ..core.managers import edit_or_reply
-from ..helpers.functions import pandaalive, check_data_base_heal_th, get_readable_time
+from ..helpers.functions import check_data_base_heal_th, get_readable_time
 from ..helpers.utils import reply_id
 from . import mention
 
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
+
 
 def ilham_logo(event):
     "A kind of showing bot details"
