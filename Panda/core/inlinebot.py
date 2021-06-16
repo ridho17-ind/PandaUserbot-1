@@ -533,11 +533,12 @@ async def inline_handler(event):  # sourcery no-metrics
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    buttons = [
-        (Button.inline("❌ Hapus semua ❌", "❌ Terhapus ❌"),
-        (Button.inline("🤖 Open Menu 🤖", data="mainmenu"),),
-    ]
-    await event.edit("👾 Menu Closed 👾", buttons=buttons)
+    await event.edit("👾 Menu Closed 👾", buttons=buttons),
+        buttons=[
+            Button.inline("❌ Hapus semua ❌", "❌ Terhapus ❌"),
+            Button.inline("🤖 Open Menu 🤖", data="mainmenu"),
+        ],
+    )
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
