@@ -70,10 +70,6 @@ def main_menu():
     if Config.ALIVE_PIC:
         try:
             logo = Config.ALIVE_PIC
-        panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-        panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
-        panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
     buttons = [
         (
             Button.inline(
