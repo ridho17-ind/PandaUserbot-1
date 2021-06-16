@@ -58,9 +58,9 @@ async def amireallyalive(event):
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
-            f"**{EMOJI} Master:** {mention}\n\n"
-)
-             
+            f"**{EMOJI} Master:** {mention}\n\n",
+        )
+
 
 @pandaub.ilhammansiz_cmd(
     pattern="ialive$",

@@ -8,7 +8,6 @@ from PIL import Image
 
 from Panda import pandaub
 
-
 plugin_category = "utils"
 
 
