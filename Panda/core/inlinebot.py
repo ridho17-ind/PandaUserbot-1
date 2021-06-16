@@ -55,7 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    file=ilhammansiez
+    file = ilhammansiez
     text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
@@ -118,7 +118,6 @@ def main_menu():
         ),
     ]
     return text, buttons, file
-    
 
 
 def command_in_category(cname):
