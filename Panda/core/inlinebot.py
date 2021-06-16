@@ -517,8 +517,8 @@ async def inline_handler(event):  # sourcery no-metrics
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
-        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),
-        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),
+        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),),
+        (Button.url("Source code", "https://github.com/ilhammansiz/PandaUserbot"),),
         (Button.inline("Open Menu", data="mainmenu"),),
     ]
     await event.edit("Menu Closed", buttons=buttons)
