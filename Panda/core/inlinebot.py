@@ -546,7 +546,9 @@ async def on_plugin_callback_query_handler(event):
         file=ilhammansiez,
         link_preview=True,
         buttons=[
-            Button.url("🐼 𝐏𝐀𝐍𝐃𝐀-𝗨𝗦𝗘𝗥𝗕𝗢𝗧 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
+            Button.url(
+                "🐼 𝐏𝐀𝐍𝐃𝐀-𝗨𝗦𝗘𝗥𝗕𝗢𝗧 🐼", "https://github.com/ilhammansiz/PandaUserbot"
+            ),
             Button.inline("MENU UTAMA", data="mainmenu"),
             Button.url("•SUPPORT• ", "https://t.me/TEAMSquadUserbotSupport"),
         ],
