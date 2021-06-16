@@ -23,7 +23,6 @@ from ..helpers.functions.utube import (
     result_formatter,
     ytsearch_data,
 )
-from ..plugins import mention
 from ..sql_helper.globals import gvarstatus
 from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
@@ -68,7 +67,6 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 
 def main_menu():
-    file=ilhammansiez
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
