@@ -3,7 +3,7 @@ from collections import deque
 
 from . import edit_or_reply, pandaub
 
-plugin_category = "fun"
+plugin_category = "ilham"
 
 
 @pandaub.ilhammansiz_cmd(
