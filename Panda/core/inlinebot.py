@@ -148,10 +148,6 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
 
 
 def amireallyalive(event):
-    "A kind of showing bot details"
-    reply_to_id = await reply_id(event)
-    uptime = await get_readable_time((time.time() - StartTime))
-    _, check_sgnirts = check_data_base_heal_th()
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         panda_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
