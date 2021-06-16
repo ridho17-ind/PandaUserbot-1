@@ -544,7 +544,7 @@ async def on_plugin_callback_query_handler(event):
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
 async def on_plugin_callback_query_handler(event):
-    text = f"❌ TerHapus Semua ❌"
+    f"❌ TerHapus Semua ❌"
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
