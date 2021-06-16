@@ -55,7 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"╔══════════════\n╠[🐼]({ilhammansiez}) 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
+    text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
             Button.inline(
@@ -128,6 +128,8 @@ def main_menu():
     ]
     return text, buttons
 
+def ilham_logo():
+    file = ilhammansiez
 
 def command_in_category(cname):
     cmds = 0
@@ -626,12 +628,10 @@ async def on_plug_in_callback_query_handler(event):
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
+    _result = ilham_logo()
     _result = main_menu()
     await event.edit(_result[0], buttons=_result[1]),
-    _result = builder.photo(
-        file=ilhammansiez,
-        link_preview=False,
-    )
+    
 
 
 @pandaub.tgbot.on(
