@@ -75,16 +75,6 @@ def main_menu():
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
         panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
         panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-    else:
-        await edit_or_reply(
-            event,
-            f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-            f"**{EMOJI} Database :** `{check_sgnirts}`\n"
-            f"**{EMOJI} Telethon Version :** `{version.__version__}\n`"
-            f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
-            f"**{EMOJI} Python Version :** `{python_version()}\n`"
-            f"**{EMOJI} Master:** {mention}\n",
-        )
     buttons = [
         (
             Button.inline(
