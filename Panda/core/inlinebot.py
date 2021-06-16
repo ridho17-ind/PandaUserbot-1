@@ -543,7 +543,7 @@ async def on_plugin_callback_query_handler(event):
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansiz")))
 async def on_plugin_callback_query_handler(event):
     await event.edit(
-        file=ilhammansiz,
+        file=ilhammansiez,
         link_preview=True,
         buttons=[
             Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
