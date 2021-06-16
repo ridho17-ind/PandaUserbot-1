@@ -60,14 +60,10 @@ async def amireallyalive(event):
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
-            f"**{EMOJI} Master:** {mention}\n",
-            file=EMOJI,
-            link_preview=True,
-            buttons=[
-                Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
-                Button.url("•SUPPORT• ", "t.me/GeezSupportGroup"),
-            ],
-        )
+            f"**{EMOJI} Master:** {mention}\n",  
+          
+            )
+        
 
 
 @pandaub.ilhammansiz_cmd(
