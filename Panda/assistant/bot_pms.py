@@ -95,7 +95,15 @@ async def bot_start(event):
     else:
         start_msg = "Hey Kamu!\
             \nApa Kabar ?"
-        buttons = None
+        buttons = [
+            (
+                Button.url("Repo", "https://github.com/IlhamMansiez/PandaUserbot"),
+                Button.url(
+                    "Deploy",
+                    "https://heroku.com/deploy?template=https://github.com/IlhamMansiez/PandaPack",
+                ),
+            )
+        ]
     try:
         await event.client.send_message(
             chat.id,
