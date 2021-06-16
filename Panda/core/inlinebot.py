@@ -536,15 +536,8 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         (Button.inline("🤖 Open Menu 🤖", data="mainmenu"),),
     ]
-    await event.edit(
-        file=ilhammansiez,
-        link_preview=True,
-        buttons=[
-            Button.url("🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
-            Button.inline("MENU UTAMA", data="mainmenu"),
-            Button.url("•SUPPORT• ", "https://t.me/TEAMSquadUserbotSupport"),
-        ],
-    )
+    await event.edit("Menu Closed", buttons=buttons)
+
 
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
