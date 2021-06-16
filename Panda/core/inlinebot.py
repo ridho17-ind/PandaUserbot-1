@@ -533,6 +533,8 @@ async def inline_handler(event):  # sourcery no-metrics
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 async def on_plug_in_callback_query_handler(event):
     await event.edit(
+        file=ilhammansiez,
+        link_preview=True,
         buttons=[
             Button.inline("❌ Hapus semua ❌", data=ilhammansizz"),
             Button.inline("🤖 Open Menu 🤖", data="mainmenu"),
