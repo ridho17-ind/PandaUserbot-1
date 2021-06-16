@@ -102,11 +102,11 @@ def main_menu():
         (
             Button.inline(
                 f"♠ 𝐒𝐮𝐝𝐨 ({len(GRP_INFO['mansiez'])})",
-                data=f"tools_menu",
+                data=f"mansiez_menu",
             ),
             Button.inline(
                 f"🐒 𝐀𝐧𝐢𝐦𝐚𝐭𝐢𝐨𝐧 ({len(GRP_INFO['ilham'])})",
-                data=f"utils_menu",
+                data=f"ilham_menu",
             ),
         ),
         (
