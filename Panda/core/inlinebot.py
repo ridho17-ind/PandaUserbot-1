@@ -55,8 +55,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    file=ilhammansiez,
-    link_preview=True,
+    ilhammansiez,
     text = f"╔══════════════\n╠🐼 𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n╠🐼 𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n╠🐼 𝗨𝘀𝗲𝗿 :{mention}\n╚══════════════🐼"
     buttons = [
         (
@@ -548,9 +547,7 @@ async def on_plugin_callback_query_handler(event):
         file=ilhammansiez,
         link_preview=True,
         buttons=[
-            Button.url(
-                "🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"
-            ),
+            Button.url("🐼 𝐏𝐀𝐍𝐃𝐀 🐼", "https://github.com/ilhammansiz/PandaUserbot"),
             Button.inline("MENU UTAMA", data="mainmenu"),
             Button.url("•SUPPORT• ", "https://t.me/TEAMSquadUserbotSupport"),
         ],
