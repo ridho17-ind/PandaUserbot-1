@@ -573,7 +573,9 @@ async def on_plugin_callback_query_handler(event):
         file=ilhammansiez,
         link_preview=True,
         buttons=[
-            Button.url("🤖 •SUPPORT•GRUP 🤖", "https://t.me/TEAMSquadUserbotSupport"),
+            Button.url("🤖 SUPPORT 🤖", "https://t.me/TEAMSquadUserbotSupport"),
+            Button.url("🐼 Creator 🐼", "https://t.me/diemmmmmmmmmm"),
+            Button.inline("⚙ Menu ⚙", data="mainmenu"),
         ],
     )
 
