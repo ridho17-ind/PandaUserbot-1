@@ -136,11 +136,9 @@ from platform import python_version
 from telethon import version
 from telethon.events import CallbackQuery
 
-from Panda import StartTime, pandaub, pandaversion
+from Panda import pandaub, pandaversion
 
 from ..Config import Config
-from ..helpers.functions import check_data_base_heal_th, get_readable_time
-from ..helpers.utils import reply_id
 from . import mention
 
 CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
