@@ -540,7 +540,7 @@ async def on_plugin_callback_query_handler(event):
             Button.inline("MENU UTAMA", data="mainmenu"),
         ],
     )
-   
+
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"ilhammansizz")))
 async def on_plugin_callback_query_handler(event):
