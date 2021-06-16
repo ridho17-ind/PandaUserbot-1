@@ -7,6 +7,7 @@ import PIL.ImageOps
 from PIL import Image
 
 from Panda import pandaub
+LOGS = logging.getLogger(__name__)
 
 plugin_category = "utils"
 
