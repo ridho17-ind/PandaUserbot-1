@@ -147,7 +147,7 @@ CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ BOT PANDA SUCCESSFULLY ✮"
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🐼 "
 
 
-def ilham_logo(event):
+def amireallyalive(event):
     "A kind of showing bot details"
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
@@ -662,7 +662,7 @@ async def on_plug_in_callback_query_handler(event):
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(rb"mainmenu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
-    _result = ilham_logo()
+    _result = amireallyalive(event)
     _result = main_menu()
     await event.edit(_result[0], buttons=_result[1]),
 
