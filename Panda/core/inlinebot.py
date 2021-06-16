@@ -67,9 +67,7 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 def main_menu():
     text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n**{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
-    if ilhammansiez:
-        try:
-            file = ilhammansiez
+    file = ilhammansiez
     buttons = [
         (
             Button.inline(
