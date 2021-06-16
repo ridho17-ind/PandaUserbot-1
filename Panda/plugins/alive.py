@@ -44,6 +44,7 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         panda_caption += f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n"
+        panda_caption += f"**[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot), 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)\n"
         results = await event.client.inline_query(Config.TG_BOT_USERNAME, panda_caption)
         await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
         await event.client.send_file(
@@ -60,8 +61,9 @@ async def amireallyalive(event):
             f"**{EMOJI} Python Version :** `{python_version()}\n`"
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
-            f"**{EMOJI} Master:** {mention}\n",
-        )
+            f"**{EMOJI} Master:** {mention}\n\n",
+            f"**[🤖 REPO 🤖](https://github.com/ilhammansiz/PandaUserbot), 👾 [SUPPORT](https://t.me/TEAMSquadUserbotSupport)
+        
 
 
 @pandaub.ilhammansiz_cmd(
