@@ -640,7 +640,7 @@ async def on_plug_in_callback_query_handler(event):
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     _result = main_menu()
-    await event.edit(_result[0], _result[0], buttons=_result[1]),
+    await event.edit(_result[0], buttons=_result[1]),
 
 
 @pandaub.tgbot.on(
