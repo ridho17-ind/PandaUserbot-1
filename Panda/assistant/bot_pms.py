@@ -93,8 +93,10 @@ async def bot_start(event):
             )
         ]
     else:
-        start_msg = "Hey Kamu!\
-            \nApa Kabar ?"
+        start_msg = f"Hey! 🐼{_format.mentionuser(chat.first_name , chat.id)},\
+                    \nI am {_format.mentionuser(user.first_name , user.id)}'s assistant bot.\
+                    \nYou can contact to my master from here.\
+                    \n\nPowered by [Pandauserbot](https://t.me/TEAMSquadUserbotSupport)"
         buttons = [
             (
                 Button.url("Repo", "https://github.com/IlhamMansiez/PandaUserbot"),
