@@ -61,7 +61,9 @@ async def amireallyalive(event):
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n",
-        )
+            results = await event.client.inline_query(Config.TG_BOT_USERNAME, panda_caption)
+            await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
+        
 
 
 @pandaub.ilhammansiz_cmd(
