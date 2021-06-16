@@ -44,6 +44,8 @@ async def amireallyalive(event):
         panda_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         panda_caption += f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
         panda_caption += f"**{EMOJI} Master:** {mention}\n"
+        results = await event.client.inline_query(Config.TG_BOT_USERNAME, panda_caption)
+        await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
         await event.client.send_file(
             event.chat_id, Config.ALIVE_PIC, caption=panda_caption, reply_to=reply_to_id
         )
@@ -59,7 +61,14 @@ async def amireallyalive(event):
             f"**{EMOJI} Sudo  :** {Config.SUDO_ENABLED}\n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
             f"**{EMOJI} Master:** {mention}\n",
-        )
+            file=EMOJI,
+            link_preview=True,
+            buttons=[
+                     Button.url("⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐", "t.me/ootspambot"),
+                     Button.url("•SUPPORT• ", "t.me/GeezSupportGroup")
+                   ]
+              )
+        
 
 
 @pandaub.ilhammansiz_cmd(
