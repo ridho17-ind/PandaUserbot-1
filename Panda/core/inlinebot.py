@@ -71,7 +71,6 @@ def main_menu():
     text = f"👾𝗛𝗲𝗹𝗽 𝗜𝗻𝗹𝗶𝗻𝗲 𝗕𝗼𝘁\n🐼𝗣𝗮𝗻𝗱𝗮-𝗨𝘀𝗲𝗿𝗯𝗼𝘁\n🤖𝗨𝘀𝗲𝗿 :{mention}\n"
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        panda_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
         panda_caption += f"**{EMOJI} Bot Version :** `{pandaversion}`\n"
         panda_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
