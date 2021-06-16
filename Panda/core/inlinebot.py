@@ -32,7 +32,7 @@ LOGS = logging.getLogger(__name__)
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 PANDALOGO = "https://telegra.ph/file/08a3d412e29a1351b7aaa.jpg"
 tr = Config.COMMAND_HAND_LER
-ilhammansiez = Config.PANDA_IMAGE
+
 
 
 def getkey(val):
@@ -67,7 +67,7 @@ EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  🤖 "
 
 
 def main_menu():
-    text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n*{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
+    text = f"**{CUSTOM_ALIVE_TEXT}**\n\n**{EMOJI} Telethon version :** `{version.__version__}`\n**{EMOJI} Bot Version :** `{pandaversion}`\n**{EMOJI} Python Version :** `{python_version()}\n`"
     if Config.ALIVE_PIC:
         panda_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         panda_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
