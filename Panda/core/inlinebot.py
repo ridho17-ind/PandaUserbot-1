@@ -534,11 +534,18 @@ async def inline_handler(event):  # sourcery no-metrics
 async def on_plug_in_callback_query_handler(event):
     await event.edit(
         buttons=[
-            Button.inline("❌ Hapus semua ❌", "❌ Terhapus ❌"),
+            Button.inline("❌ Hapus semua ❌", "data=ilhammansizz"),
             Button.inline("🤖 Open Menu 🤖", data="mainmenu"),
         ],
     )
 
+
+@pandaub.tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ilhammansizz")))
+async def on_plug_in_callback_query_handler(event):
+    await event.edit("❌ Terhapus Total ❌")
+    else:
+         reply_pop_up_alert = f"Harap Deploy Panda Userbot Anda Sendiri, Jangan Menggunakan Milik Panda Pengguna"
+         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 @pandaub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
 async def on_plugin_callback_query_handler(event):
