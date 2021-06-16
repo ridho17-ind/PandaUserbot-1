@@ -251,7 +251,7 @@ async def ff_mpeg_trim_cmd(event):
     await edit_delete(pandaevent, f"`Completed Process in {ms} seconds`", 3)
 
 
-@padaub.ilhammansiz_cmd(
+@pandaub.ilhammansiz_cmd(
     pattern="ffmpegclear$",
     command=("ffmpegclear", plugin_category),
     info={
