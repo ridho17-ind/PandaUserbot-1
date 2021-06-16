@@ -70,7 +70,7 @@ def main_menu():
     if Config.ALIVE_PIC:
         try:
             logo = Config.ALIVE_PIC
-            await event.send_file(logo)
+            text = await event.send_file(logo, text)
     buttons = [
         (
             Button.inline(
