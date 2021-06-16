@@ -34,7 +34,6 @@ PANDALOGO = "https://telegra.ph/file/08a3d412e29a1351b7aaa.jpg"
 tr = Config.COMMAND_HAND_LER
 
 
-
 def getkey(val):
     for key, value in GRP_INFO.items():
         for plugin in value:
