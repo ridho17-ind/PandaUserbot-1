@@ -138,7 +138,7 @@ def main_menu():
             ),
         ),
     ]
-    return file, text, buttons
+    return text, buttons
 
 
 def command_in_category(cname):
